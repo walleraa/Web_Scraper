@@ -1,7 +1,7 @@
 # Web_Scraper
 This is a web scraper to scrape the web
 
-    <-To use->
+# To use:
     Head to terminal
     
     <-Set up virtual environment->
