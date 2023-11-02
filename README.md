@@ -1,6 +1,7 @@
 # Web_Scraper
 This is a web scraper to scrape the web
-#To use:
+
+    <-To use->
     Head to terminal
     
     <-Set up virtual environment->
@@ -14,8 +15,8 @@ This is a web scraper to scrape the web
     pip install bs4
     pip install requests
 
-#To scrape for data:
+# To scrape for data:
     python webscraper.py (link to scrape)
 
-#To parse data:
+# To parse data:
     python parsedata.py > (some output file)
