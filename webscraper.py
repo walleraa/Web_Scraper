@@ -10,7 +10,7 @@ def main():
     response = requests.get(url)
     content = BeautifulSoup(response.content, "html.parser")
 
-    attributes = content.findAll('div', attrs={"class":"project"})
+    attributes = content.findAll('div', attrs={"class":"projects"})
     attribute_array = []
 
     for attribute in attributes:
