@@ -1,6 +1,6 @@
 {
     "url": "https://walleraa.github.io/Professional-Portfolio/personal.html",
     "content-container": "div",
-    "content-attrs": {"class": "projects"},
+    "content-attrs": {"class": "project"},
     "scrape-file": "Templates/personal_projects.py"
 }

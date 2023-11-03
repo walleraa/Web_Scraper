@@ -2,3 +2,4 @@ env/
 output.txt
 scrapedData.json
 .DS_Store
+Templates/__pycache__/
