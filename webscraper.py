@@ -21,7 +21,7 @@ def main():
     response = requests.get(url)
     content = BeautifulSoup(response.content, "html.parser")
 
-    attributes = content.findAll(template["content-container"], attrs=template["content-attrs"])
+    attributes = scraper.initial_scrape(content)
 
     attribute_array = []
 
