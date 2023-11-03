@@ -24,8 +24,9 @@ def main():
         attribute_object = scraper.scraper(attribute)
         attribute_array.append(attribute_object)
 
-    with open(json_file, 'w') as outfile:
-        json.dump(attribute_array, outfile)
+    print(attribute_array)
+    # with open(json_file, 'w') as outfile:
+    #     json.dump(attribute_array, outfile)
 
 
 main()
