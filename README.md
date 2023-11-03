@@ -19,7 +19,7 @@ Remember to always check a website's robots.txt file before scraping to ensure y
     pip install requests
 
 # To scrape for data:
-    python webscraper.py Templates/(json file with templated information, see templates for example)
+    python webscraper.py Templates/(Python file with templated information, see templates for example)
 
 # To parse data:
     python parsedata.py > (some output file)
