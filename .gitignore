@@ -1,3 +1,4 @@
 env/
 output.txt
 scrapedData.json
+.DS_Store
