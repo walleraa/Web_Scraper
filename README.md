@@ -16,7 +16,7 @@ This is a web scraper to scrape the web
     pip install requests
 
 # To scrape for data:
-    python webscraper.py (link to scrape)
+    python webscraper.py Templates/(json file with templated information, see templates for example)
 
 # To parse data:
     python parsedata.py > (some output file)
