@@ -1,3 +1,6 @@
+def get_url():
+    return "https://walleraa.github.io/Professional-Portfolio/personal.html"
+
 def initial_scrape(content):
     return content.findAll('div', attrs={"class":"project"})
 

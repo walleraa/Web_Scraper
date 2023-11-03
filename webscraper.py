@@ -5,19 +5,14 @@ from bs4 import BeautifulSoup
 import requests
 
 def main():
-    template_file = sys.argv[1]
-    template = []
-    f = open(template_file)
-    template = json.load(f)
-
+    scrape_file = sys.argv[1]
     json_file = "scrapedData.json"
-    url = template["url"]
-    scrape_file = template["scrape-file"]
 
     spec = importlib.util.spec_from_file_location("my_module", scrape_file)
     scraper = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(scraper)
-
+    
+    url = scraper.get_url()
     response = requests.get(url)
     content = BeautifulSoup(response.content, "html.parser")
 
