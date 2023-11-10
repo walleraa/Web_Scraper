@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 # import requests
 
-def scrape_page(json_file, scraper, url):
+def scrape_page(scraper, url):
     # response = requests.get(url)
     options = webdriver.ChromeOptions()
     options.add_argument("--incognito")
@@ -25,9 +25,7 @@ def scrape_page(json_file, scraper, url):
         attribute_object = scraper.scraper(attribute)
         attribute_array.append(attribute_object)
 
-    # print(attribute_array)
-    with open(json_file, 'w') as outfile:
-        json.dump(attribute_array, outfile)
+    return attribute_array
 
 def main():
     scrape_file = sys.argv[1]
@@ -37,8 +35,16 @@ def main():
     scraper = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(scraper)
 
+    output_list = []
     url_list = scraper.get_urls()
     for url in url_list:
-        scrape_page(json_file, scraper, url)
+        output = {
+            "url":url,
+            "data":scrape_page(scraper, url)
+        }
+        output_list.append(output)
+
+    with open(json_file, 'w') as outfile:
+        json.dump(output_list, outfile)        
 
 main()
