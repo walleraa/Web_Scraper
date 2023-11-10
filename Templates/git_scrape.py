@@ -1,5 +1,8 @@
-def get_url():
-    return "https://github.com/walleraa/Beast_Of_The_Sea"
+def get_urls():
+    arr = [
+        "https://github.com/walleraa/Beast_Of_The_Sea"
+    ]
+    return arr
 
 def initial_scrape(content):
     return content.find('main').find_all('div', attrs={"class":"Box-row"})

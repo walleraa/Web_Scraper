@@ -1,5 +1,8 @@
-def get_url():
-    return "https://walleraa.github.io/Professional-Portfolio/personal.html"
+def get_urls():
+    arr = [
+        "https://walleraa.github.io/Professional-Portfolio/personal.html"
+    ]
+    return arr
 
 def initial_scrape(content):
     return content.findAll('div', attrs={"class":"project"})
