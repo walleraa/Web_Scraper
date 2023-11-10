@@ -16,7 +16,7 @@ Remember to always check a website's robots.txt file before scraping to ensure y
 
     <-Install Python libraries->
     pip install bs4
-    pip install requests
+    pip install selenium
 
 # To scrape for data:
     python webscraper.py Templates/(Python file with templated information, see templates for example)
@@ -24,4 +24,3 @@ Remember to always check a website's robots.txt file before scraping to ensure y
 # To parse data:
     python parsedata.py > (some output file)
 
-Sometimes the scraper will throw an error about NoneType not having an attribute "find." This happens when the scraper pulls Skeleton divs. It's probably due to the site's Javascript not updating the HTML in time for the scraper. Either way, just wait a few seconds and try again.
